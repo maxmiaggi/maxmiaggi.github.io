@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Exercise 1</title>
+    <script type="text/javascript" src="http://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://pubnub.github.io/eon/v/eon/1.0.0/eon.css" />
+</head>
+
+<body>
+    <div id="chart"></div>
+    <script type="text/javascript">
+
+        var pubnub = new PubNub({
+            subscribeKey : "sub-c-486be1d0-5c63-11e7-b272-02ee2ddab7fe"
+        });
+
+        eon.chart({
+            channels: ["random5"],
+            generate: {
+                bindto: '#chart'
+            },
+                
+            pubnub: pubnub
+        });
+
+    </script>
+</body>
+</html>
